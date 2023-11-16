@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Edu+TAS+Beginner:wght@500&family=Noto+Sans:ital@0;1&display=swap');
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+
+h1 {
+    font-family: "Agbalumo", sans-serif;
+    color: #ed303c!important;
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+  
+  h2, h3{
+    font-family: "Edu TAS Principiante", sans-serif;
+  }
+  
+  h4, h5, h6, p {
+    font-family: "Noto Sans", sans-serif;
+  }
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff9c5b;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+}
+header p{
+    font-family: "Agbalumo", sans-serif;
+    color: #3b8183;
+}
+
+.presentacion{
+    margin-left: 1.5em;
+}
+.form-inline{
+    display: flex!important;
+}
+
+
+#indice_comidas{
+    display: flex;
+}
+#indice_comidas div{
+    color: rgb(255, 255, 255);
+    background-color:rgb(245, 102, 77);
+    width: auto;
+    margin: auto;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.carta_completa{
+    padding-top: 1em;
+    margin-left: 1em;
+}
+
+/* .carta_completa article{
+    display: flex;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+} */
+
+.tipo_comida{
+    display: flex;
+    margin-bottom: 2em;
+    justify-content: flex-start;
+}
+
+.carta_completa h3{
+    width: 6em;
+}
+
+.card{
+    margin-left: 0.2em;
+}
+
+.total{
+    border: 0.3em solid black;
+    width: 15em;
+    margin: auto;
+    margin-bottom: 1em;
+    
+}
