@@ -15,7 +15,6 @@ ul {
 h1 {
     font-family: "Agbalumo", sans-serif;
     color: #ed303c!important;
-    margin-left: 1em;
     margin-bottom: 1em;
   }
   
@@ -27,10 +26,8 @@ h1 {
     font-family: "Noto Sans", sans-serif;
   }
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #ff9c5b;
+    text-align: center;
     padding: 0.5em 1em;
     margin-bottom: 1em;
 }
@@ -40,23 +37,35 @@ header p{
 }
 
 .presentacion{
-    margin-left: 1.5em;
+    margin: auto;
+    text-align: center;
+}
+.estilo_boton{
+    color: #f5bd98;
+    background-color: #3b8183;
+    padding: 1em;
+    margin: auto;
+    border-radius: 0.5em;
 }
 .form-inline{
     display: flex!important;
 }
 
-
-#indice_comidas{
-    display: flex;
+.apagado{
+    display: none;
 }
-#indice_comidas div{
-    color: rgb(255, 255, 255);
-    background-color:rgb(245, 102, 77);
-    width: auto;
+
+.indice_comidas {
+    display: flex;
+    justify-content: space-between; 
     margin: auto;
-    padding: 2em;
-    border-radius: 1em;
+    margin-top: 2em;
+    width: 50%;
+}
+
+.boton_comidas button{
+    color: #ed303c;
+    margin: 0.3em;
 }
 
 .carta_completa{

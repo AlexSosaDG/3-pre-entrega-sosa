@@ -15,40 +15,44 @@
 
 <body>
     <header>
-        <p>Comida Rica</p>
-        <div class="boton-buscar">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="....." aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
-        </div>
+        <p>Comida rica</p>
     </header>
     <section class="presentacion">
         <h1>Buenas</h1>
         <h2>¿Qué te gustaría comer hoy?</h2>
-        <h3>Iniciar pedido</h3>
+        <button id="activar_boton" class="estilo_boton">Iniciar pedido</button>
     </section>
-    <section id="indice_comidas" class="section_lista_comidas">
-        <div>
-            <h5>Sanguches</h5>
-        </div>
-        <div>
-            <h5>A la plancha</h5>
-        </div>
-        <div>
-            <h5>Mila al plato</h5>
-        </div>
-        <div>
-            <h5>Tartas</h5>
-        </div>
-        <div>
-            <h5>Tortillas</h5>
-        </div>
-        <div>
-            <h5>Plato del día</h5>
-        </div>
+    <section id="iniciar" class="apagado">
+        <article class="boton_comidas">
+            <div>
+                <button>Sanguches</button>
+            </div>
+            <div>
+                <button>A la plancha</button>
+            </div>
+            <div>
+                <button>Mila al plato</button>
+            </div>
+            <div>
+                <button>Tartas</button>
+            </div>
+            <div>
+                <button>Tortillas</button>
+            </div>
+            <div>
+                <button>Plato del día</button>
+            </div>
+        </article>
+        <article>
+            <div class="boton-buscar">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Que plato buscas?" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </div>
+        </article>
     </section>
-    <section class="carta_completa">
+    <section class="carta_completa apagado">
         <article class="tipo_comida"><!-- Plato del dia -->
             <h3>Plato del día</h3>
             <div class="card" style="width: 15rem;">
@@ -355,7 +359,7 @@
             </div>
         </article>
     </section>
-    <div class="total">
+    <div class="total apagado">
         <h6>Total</h6>
         <p>$----</p>
     </div>
