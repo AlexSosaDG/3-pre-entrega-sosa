@@ -14,355 +14,45 @@
 </head>
 
 <body>
-    <header>
-        <p>Comida rica</p>
-    </header>
-    <section class="presentacion">
-        <h1>Buenas</h1>
-        <h2>¿Qué te gustaría comer hoy?</h2>
-        <button id="activar_boton" class="estilo_boton">Iniciar pedido</button>
-    </section>
-    <section id="iniciar" class="apagado">
-        <article class="boton_comidas">
+    <div id="pantalla_completa">
+        <header>
+            <p>Comida rica</p>
+        </header>
+        <section class="presentacion">
+            <h1>Buenas</h1>
+            <h2>¿Qué te gustaría comer hoy?</h2>
+            <button id="activar_boton" class="estilo_boton">Iniciar pedido</button>
+        </section>
+        <div class="cancelar apagado" id="boton_salir">
+            <button>SALIR</button>
+        </div>
+        <section id="iniciar" class="indice_comidas apagado">
             <div>
-                <button>Sanguches</button>
+                <button class="ver_carta" id="ver_lista">Ver carta</button>
             </div>
-            <div>
-                <button>A la plancha</button>
-            </div>
-            <div>
-                <button>Mila al plato</button>
-            </div>
-            <div>
-                <button>Tartas</button>
-            </div>
-            <div>
-                <button>Tortillas</button>
-            </div>
-            <div>
-                <button>Plato del día</button>
-            </div>
-        </article>
-        <article>
             <div class="boton-buscar">
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Que plato buscas?" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Que plato buscas?"
+                        aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </div>
-        </article>
-    </section>
-    <section class="carta_completa apagado">
-        <article class="tipo_comida"><!-- Plato del dia -->
-            <h3>Plato del día</h3>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Pastel de papa</h5>
-                    <p class="card-text">Carne, papa, huevo, queso. Incluye cubiertos</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Pan</li>
-                    <li class="list-group-item">Sal</li>
-                    <li class="list-group-item">Queso rallado</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Agregar a tu pedido</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Ravioles con Tuco</h5>
-                    <p class="card-text">Ravioles de 4 quesos, carne, salsa. Incluye cubiertos</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Pan</li>
-                    <li class="list-group-item">Sal</li>
-                    <li class="list-group-item">Queso rallado</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Agregar a tu pedido</a>
-                </div>
-            </div>
-        </article>
-        <article class="tipo_comida"><!-- sanguches -->
-            <h3>Sanguches</h3>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Sanguche de Milanesa de carne</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Sanguche de milanesa de pollo</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Sanguche de Churrasco</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Sanguche de pechuga</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </article>
-        <article class="tipo_comida"><!-- empanadas -->
-            <h3>Empanadas</h3>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Empanadas de carne</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Empanadas de pollo</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Empanadas de jamón y queso</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </article>
-        <article class="tipo_comida"><!-- mila al plato -->
-            <h3>Mila al plato</h3>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Mila simple</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Mila clasica</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Mila napolitana</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </article>
-        <article class="tipo_comida"> <!-- cortes a la plancha -->
-            <h3>Cortes a la plancha</h3>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Pechuga</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Bife</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Churrasco</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </article>
-        <article class="tipo_comida"><!-- Tartas -->
-            <h3>Tartas</h3>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Tarta de jamón y queso</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </article>
-        <article class="tipo_comida"><!-- Tortillas -->
-            <h3>Tortillas</h3>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Tortilla simple</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-            <div class="card" style="width: 15rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Tortila rellena</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </article>
-    </section>
-    <div class="total apagado">
-        <h6>Total</h6>
-        <p>$----</p>
+        </section>
+        <section class="boton_comidas apagado" id="lista_comidas"><!-- class: "boton_comidas" -->
+            <ol id="lista_menu_general">
+            </ol>
+        </section>
+        <section class="carta_completa apagado">
+        </section>
+        <div class="total apagado">
+            <h6>Total</h6>
+            <p>$----</p>
+        </div>
     </div>
+    <section class="apagado salir" id="mensaje_despedida"> <!-- class: "salir" -->
+        <h4>Gracias por visitarnos!</h4>
+        <h5>Comida rica</h5>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
