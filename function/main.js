@@ -99,7 +99,7 @@ function renderizarMenuCompleto(arrayMenu){
     }
 }
 
-function crearTarjetas(plato){
+function crearTarjetas(plato){ //intento de tarjetas de comidas con ingredientes
     const verTarjetas = ducoment.getElementById("tarjetas_comidas");
 
     for(const cPlato of plato){
@@ -112,15 +112,19 @@ function crearTarjetas(plato){
         const divCardBody = document.createElement("div");
         divCardBody.className = "card-body";
 
-        const h5 = document.createElement("h5");
-        h5.className = "card-title";
-        h5.innerText = tortilla.nombre;
+        const nombreComida = document.createElement("h5");
+        nombreComida.className = "card-title";
+        nombreComida.innerText = cPlato.nombre;
 
-        const p = document.createElement("p");
-        p.className = "card-text";
-        p.innerHTML = `<strong>Precio:</strong> $${cPlato.precio}`;
+        const precioComida = document.createElement("p");
+        precioComida.className = "card-text";
+        precioComida.innerHTML = `<strong>Precio:</strong> $${cPlato.precio}`;
 
-        divCardBody.append(h5, p);
+        const ingComida = document.createElement("p");
+        ingComida.className = "card-text";
+        ingComida.innerText = cPlato.ingredientes;
+
+        divCardBody.append(nombreComida, precioComida, ingComida);
         divCard.append(divCardBody);
         divPadre.append(divCard);
 
