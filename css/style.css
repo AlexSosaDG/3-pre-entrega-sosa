@@ -6,7 +6,7 @@
   margin: 0;
 }
 
-ul {
+ul, ol {
     list-style-type: none;
     padding-left: 0;
   }
@@ -47,8 +47,29 @@ header p{
     margin: auto;
     border-radius: 0.5em;
 }
-.form-inline{
-    display: flex !important;
+.estilo_boton:hover{
+    background-color: #f5bd98;
+    color: #3b8183;
+}
+
+#lista_menu_general{
+    align-items: center;
+    padding: 2em;
+    width: auto;
+}
+#lista_menu_general li{
+   text-align: center;
+}
+#lista_menu_general li button{
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    color: #3b8183;
+    border: 0.1em solid #3b8183;
+}
+#lista_menu_general li button:hover{
+    background-color: #3b8183;
+    color: #ffffff;
 }
 
 .apagado{
@@ -56,68 +77,25 @@ header p{
     display: none !important;
 }
 
-.ver_carta{
-    padding: 0.5em;
-    border: 0.1em solid #6d9192;
-    border-radius: 0.5em;
-}
-.indice_comidas {
-    display: flex;
-    justify-content: space-between; 
-    margin: auto;
-    margin-top: 2em;
-    width: 50%;
-}
-.boton_comidas{
-    width: 50%;
-    margin: auto;
-}
-.boton_comidas button{
-    color: #ed303c;
-    margin: 0.3em;
-}
-
 .carta_completa{
     padding-top: 1em;
     margin-left: 1em;
 }
 
-/* .carta_completa article{
-    display: flex;
-    margin-bottom: 1em;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: baseline;
-} */
-
-.tipo_comida{
-    display: flex;
-    margin-bottom: 2em;
-    justify-content: flex-start;
-}
-
-.carta_completa h3{
-    width: 6em;
-}
-
-.card{
-    margin-left: 0.2em;
-}
 .cancelar{
     background-color: #ed303c;
     padding: 0.5em;
     width: 5em;
     border-radius: 1em;
     text-align: center;
-    position: absolute;
-    top: 30em;
-    right: 15em;
+    position: fixed;
+    bottom: 1em;
+    right: 10em;
 }
 .cancelar button{
     color: #ffffff;
     background-color: #ed303c;
     font-family: "Edu TAS Principiante", sans-serif;
-    
 }
 .salir{
     background-color: #ff9c5b;
@@ -127,14 +105,13 @@ header p{
     width: 50%;
     padding: 3em 1em;
     margin: auto;
-    margin-top:1em;
+    margin-bottom:1em;
+    margin-top: 3em;
 }
-
 
 .total{
     border: 0.3em solid black;
     width: 15em;
     margin: auto;
     margin-bottom: 1em;
-    
 }

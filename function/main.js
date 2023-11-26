@@ -90,31 +90,43 @@ function mostrarElemento(nombreId){
     const elemento = document.getElementById(nombreId)
     elemento.classList.remove("apagado");
 }
-function renderizarArray(arrayMenu){
+
+function renderizarMenuCompleto(arrayMenu){
     const listaMenu = document.getElementById("lista_menu_general")
     for(let index = 0; index < arrayMenu.length; index++){
         const itemCarta = arrayMenu[index]
         listaMenu.innerHTML = listaMenu.innerHTML + `<li id="opcion${index}"><button>${itemCarta.nombre}</button></li>`;
     }
-    for(let index = 0; index < arrayMenu.length; index++){
-        const itemCarta = arrayMenu[index]
-        const botonOpcion = document.getElementById(`opcion${index}`)
-        botonOpcion.onclick = () => {
-            limiarOpciones();
-            renderizarArray(itemCarta.comidas);
-        }
+}
+
+function crearTarjetas(plato){
+    const verTarjetas = ducoment.getElementById("tarjetas_comidas");
+
+    for(const cPlato of plato){
+        const divPadre = document.createElement("div");
+        divPadre.className = "col-12 col-sm-4 mb-2";
+
+        const divCard = document.createElement("div");
+        divCard.className = "card";
+
+        const divCardBody = document.createElement("div");
+        divCardBody.className = "card-body";
+
+        const h5 = document.createElement("h5");
+        h5.className = "card-title";
+        h5.innerText = tortilla.nombre;
+
+        const p = document.createElement("p");
+        p.className = "card-text";
+        p.innerHTML = `<strong>Precio:</strong> $${cPlato.precio}`;
+
+        divCardBody.append(h5, p);
+        divCard.append(divCardBody);
+        divPadre.append(divCard);
+
+        verTarjetas.append(divPadre);
     }
 }
-
-
-
-const iniciarPedido = document.getElementById("activar_boton")
-iniciarPedido.onclick = () => {
-    ocultarElemento("activar_boton");
-    mostrarElemento("iniciar")
-    mostrarElemento("boton_salir")
-}
-
 const cancelarPedido = document.getElementById("boton_salir")
 cancelarPedido.onclick = () =>{
     ocultarElemento("boton_salir");
@@ -122,13 +134,21 @@ cancelarPedido.onclick = () =>{
     ocultarElemento("pantalla_completa");
 }
 
-const prenderBotonComida = document.getElementById("ver_lista")
-prenderBotonComida.onclick = () =>{
+const iniciarPedido = document.getElementById("activar_boton")
+iniciarPedido.onclick = () => {
+    ocultarElemento("activar_boton");
     mostrarElemento("lista_comidas");
-    ocultarElemento("ver_lista");
     limiarOpciones();
-    renderizarArray(cartaCompleta);
+    renderizarMenuCompleto(cartaCompleta);
+    mostrarElemento("boton_salir");
 }
+
+const irASanguche = document.getElementById("opcion0")
+irASanguche.onclick = () => {
+    crearTarjetas(sanguches);
+}
+
+
 
 
 

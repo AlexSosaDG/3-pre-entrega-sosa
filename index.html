@@ -20,29 +20,17 @@
         </header>
         <section class="presentacion">
             <h1>Buenas</h1>
-            <h2>¿Qué te gustaría comer hoy?</h2>
+            <h2 id="titular">¿Qué te gustaría comer hoy?</h2>
             <button id="activar_boton" class="estilo_boton">Iniciar pedido</button>
         </section>
-        <div class="cancelar apagado" id="boton_salir">
+        <div class="apagado cancelar" id="boton_salir">
             <button>SALIR</button>
         </div>
-        <section id="iniciar" class="indice_comidas apagado">
-            <div>
-                <button class="ver_carta" id="ver_lista">Ver carta</button>
-            </div>
-            <div class="boton-buscar">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Que plato buscas?"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-            </div>
-        </section>
         <section class="boton_comidas apagado" id="lista_comidas"><!-- class: "boton_comidas" -->
             <ol id="lista_menu_general">
             </ol>
         </section>
-        <section class="carta_completa apagado">
+        <section class="apagado row" id="tarjetas_comidas">      
         </section>
         <div class="total apagado">
             <h6>Total</h6>
@@ -51,7 +39,12 @@
     </div>
     <section class="apagado salir" id="mensaje_despedida"> <!-- class: "salir" -->
         <h4>Gracias por visitarnos!</h4>
-        <h5>Comida rica</h5>
+        <h5>-Comida rica-</h5>
+    </section>
+    <section class="apagado confirmar">
+        <button>Confirmar</button>
+        <button>Agregar</button>
+        <button>Quitar</button>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
