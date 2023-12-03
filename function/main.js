@@ -90,6 +90,10 @@ function mostrarElemento(nombreId){
     const elemento = document.getElementById(nombreId)
     elemento.classList.remove("apagado");
 }
+let tituloSaludo = document.getElementById("tituloH1");
+let subtituloSaludo = document.getElementById("subtituloH2");
+
+let pedidoFinal = [];
 
 function renderizarMenuCompleto(arrayMenu){
     const listaMenu = document.getElementById("lista_menu_general")
@@ -97,6 +101,18 @@ function renderizarMenuCompleto(arrayMenu){
         const itemCarta = arrayMenu[index]
         listaMenu.innerHTML = listaMenu.innerHTML + `<li id="opcion${index}"><button>${itemCarta.nombre}</button></li>`;
     }
+    for(let index = 0; index < arrayMenu.length; index++){
+        const itemCarta = arrayMenu[index]
+        const botonOpcion = document.getElementById(`opcion${index}`)
+        botonOpcion.onclick = () => {
+            limiarOpciones();
+            renderizarMenuCompleto(itemCarta.comidas);
+            subtituloSaludo.innerText = "Elegi tu " + itemCarta.nombre;
+        }
+    }
+
+    
+
 }
 
 function crearTarjetas(plato){ //intento de tarjetas de comidas con ingredientes
@@ -131,6 +147,9 @@ function crearTarjetas(plato){ //intento de tarjetas de comidas con ingredientes
         verTarjetas.append(divPadre);
     }
 }
+
+
+
 const cancelarPedido = document.getElementById("boton_salir")
 cancelarPedido.onclick = () =>{
     ocultarElemento("boton_salir");
@@ -145,12 +164,15 @@ iniciarPedido.onclick = () => {
     limiarOpciones();
     renderizarMenuCompleto(cartaCompleta);
     mostrarElemento("boton_salir");
+    ocultarElemento("tituloH1");
+    mostrarElemento("subtituloH2");
 }
 
-const irASanguche = document.getElementById("opcion0")
+/*const irASanguche = document.getElementById("opcion0")
 irASanguche.onclick = () => {
-    crearTarjetas(sanguches);
-}
+    subtituloSaludo.innerText = "Elegí tu sanguche"
+    limiarOpciones();
+}*/
 
 
 
